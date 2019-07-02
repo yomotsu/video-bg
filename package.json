@@ -1,0 +1,25 @@
+{
+  "name": "video-bg",
+  "version": "0.1.0",
+  "author": "Yomotsu",
+  "license": "MIT",
+  "repository": "yomotsu/video-bg",
+  "jsnext:main": "dist/video-bg.module.js",
+  "module": "dist/video-bg.module.js",
+  "main": "dist/video-bg.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "rollup": "^1.16.4",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "rollup-watch": "^4.3.1",
+    "terser": "^4.0.2",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "dev": "rollup --config --watch",
+    "build": "rollup --config && terser 'dist/video-bg.js' -o 'dist/video-bg.min.js' --comments '/^!/'"
+  },
+  "keywords": [
+    "video"
+  ]
+}
